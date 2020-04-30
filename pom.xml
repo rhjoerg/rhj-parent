@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>ch.rhj</groupId>
-	<artifactId>rhj-spring-parent</artifactId>
+	<artifactId>rhj-parent</artifactId>
 	<version>20200430</version>
 	<packaging>pom</packaging>
 	
