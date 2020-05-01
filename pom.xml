@@ -51,6 +51,7 @@
 	</developers>
 	
 	<properties>
+	
 		<commons-compress.version>1.20</commons-compress.version>
 		<commons-io.version>2.6</commons-io.version>
 		<commons-lang3.version>3.10</commons-lang3.version>
@@ -81,12 +82,20 @@
 		<maven-war-plugin.version>3.2.3</maven-war-plugin.version>
 		<mockito-junit-jupiter.version>3.1.0</mockito-junit-jupiter.version>
 		<nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
+		<rhj-io.version>20200501</rhj-io.version>
+		
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 	
 	<dependencyManagement>
 		<dependencies>
+		
+			<dependency>
+				<groupId>ch.rhj</groupId>
+				<artifactId>rhj-io</artifactId>
+				<version>${rhj-io.version}</version>
+			</dependency>
 		
 			<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml -->
 			<dependency>
