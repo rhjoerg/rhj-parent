@@ -7,12 +7,13 @@
 	
 	<groupId>ch.rhj</groupId>
 	<artifactId>rhj-parent</artifactId>
-	<version>20200430</version>
+	<version>20200501</version>
 	<packaging>pom</packaging>
 	
 	<name>RHJ Spring Parent</name>
 	<description>RHJ Spring Parent</description>
 	<url>https://github.com/rhjoerg/${project.artifactId}</url>
+	<inceptionYear>2020</inceptionYear>
 
 	<issueManagement>
 		<url>https://github.com/rhjoerg/${project.artifactId}/issues</url>
@@ -50,11 +51,14 @@
 	</developers>
 	
 	<properties>
+		<commons-compress.version>1.20</commons-compress.version>
+		<commons-io.version>2.6</commons-io.version>
+		<jackson-dataformat-yaml.version>2.11.0</jackson-dataformat-yaml.version>
 		<java.version>1.8</java.version>
+		<jruby.version>9.2.11.1</jruby.version>
+		<junit-jupiter.version>5.5.2</junit-jupiter.version>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven-antrun-plugin.version>1.8</maven-antrun-plugin.version>
 		<maven-assembly-plugin.version>3.1.1</maven-assembly-plugin.version>
 		<maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
@@ -75,13 +79,58 @@
 		<maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
 		<maven-war-plugin.version>3.2.3</maven-war-plugin.version>
 		<nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 	
 	<dependencyManagement>
 		<dependencies>
 		
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-yaml</artifactId>
+			<version>${jackson-dataformat-yaml.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-compress -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-compress</artifactId>
+			<version>${commons-compress.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.jruby/jruby -->
+		<dependency>
+			<groupId>org.jruby</groupId>
+			<artifactId>jruby</artifactId>
+			<version>${jruby.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
+		<dependency>
+		    <groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter</artifactId>
+		    <version>${junit-jupiter.version}</version>
+		</dependency>
+
 		</dependencies>
 	</dependencyManagement>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 	
 	<build>
 		<pluginManagement>
