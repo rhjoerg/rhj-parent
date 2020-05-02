@@ -7,7 +7,7 @@
 	
 	<groupId>ch.rhj</groupId>
 	<artifactId>rhj-parent</artifactId>
-	<version>20200502</version>
+	<version>20200503</version>
 	<packaging>pom</packaging>
 	
 	<name>RHJ Spring Parent</name>
@@ -95,8 +95,9 @@
 		<maven-war-plugin.version>3.2.3</maven-war-plugin.version>
 		<mockito-junit-jupiter.version>3.1.0</mockito-junit-jupiter.version>
 		<nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
+		
 		<rhj-io.version>20200501</rhj-io.version>
-		<rhj-utils.version>20200502</rhj-utils.version>
+		<rhj-utils.version>20200503</rhj-utils.version>
 		
 	</properties>
 	
