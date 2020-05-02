@@ -52,6 +52,12 @@
 	
 	<properties>
 	
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		
 		<commons-compress.version>1.20</commons-compress.version>
 		<commons-io.version>2.6</commons-io.version>
 		<commons-lang3.version>3.10</commons-lang3.version>
@@ -85,8 +91,6 @@
 		<nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
 		<rhj-io.version>20200501</rhj-io.version>
 		
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 	
 	<dependencyManagement>
@@ -204,6 +208,10 @@
 				<plugin>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>${maven-compiler-plugin.version}</version>
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+					</configuration>
 				</plugin>
 
 				<plugin>
