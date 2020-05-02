@@ -7,7 +7,7 @@
 	
 	<groupId>ch.rhj</groupId>
 	<artifactId>rhj-parent</artifactId>
-	<version>20200501</version>
+	<version>20200502</version>
 	<packaging>pom</packaging>
 	
 	<name>RHJ Spring Parent</name>
@@ -61,13 +61,19 @@
 		<commons-compress.version>1.20</commons-compress.version>
 		<commons-io.version>2.6</commons-io.version>
 		<commons-lang3.version>3.10</commons-lang3.version>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-text -->
+		<commons-text.version>1.8</commons-text.version>
+		
 		<jackson-dataformat-yaml.version>2.11.0</jackson-dataformat-yaml.version>
 		<java.version>1.8</java.version>
 		<jimfs.version>1.1</jimfs.version>
 		<jruby.version>9.2.11.1</jruby.version>
 		<junit-jupiter.version>5.5.2</junit-jupiter.version>
-		<maven.compiler.source>${java.version}</maven.compiler.source>
-		<maven.compiler.target>${java.version}</maven.compiler.target>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.maven/maven-artifact -->
+		<maven-artifact.version>3.6.3</maven-artifact.version>
+		
 		<maven-antrun-plugin.version>1.8</maven-antrun-plugin.version>
 		<maven-assembly-plugin.version>3.1.1</maven-assembly-plugin.version>
 		<maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
@@ -136,7 +142,19 @@
 				<artifactId>commons-lang3</artifactId>
 				<version>${commons-lang3.version}</version>
 			</dependency>
+			
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-text</artifactId>
+				<version>${commons-text.version}</version>
+			</dependency>
 	
+			<dependency>
+				<groupId>org.apache.maven</groupId>
+				<artifactId>maven-artifact</artifactId>
+				<version>${maven-artifact.version}</version>
+			</dependency>
+
 			<!-- https://mvnrepository.com/artifact/org.jruby/jruby -->
 			<dependency>
 				<groupId>org.jruby</groupId>
