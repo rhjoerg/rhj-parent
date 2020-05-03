@@ -75,6 +75,10 @@
 		<java.version>1.8</java.version>
 		<jimfs.version>1.1</jimfs.version>
 		<jruby.version>9.2.11.1</jruby.version>
+		
+		<!-- https://mvnrepository.com/artifact/org.jruby/jruby-core -->
+		<jruby-core.version>9.2.11.1</jruby-core.version>
+		
 		<junit-jupiter.version>5.5.2</junit-jupiter.version>
 		
 		<!-- https://mvnrepository.com/artifact/org.apache.maven/maven-artifact -->
@@ -186,6 +190,12 @@
 				<groupId>org.jruby</groupId>
 				<artifactId>jruby</artifactId>
 				<version>${jruby.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.jruby</groupId>
+				<artifactId>jruby-core</artifactId>
+				<version>${jruby-core.version}</version>
 			</dependency>
 	
 			<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
