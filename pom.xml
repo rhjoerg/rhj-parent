@@ -7,7 +7,7 @@
 	
 	<groupId>ch.rhj</groupId>
 	<artifactId>rhj-parent</artifactId>
-	<version>20200503</version>
+	<version>20200504</version>
 	<packaging>pom</packaging>
 	
 	<name>RHJ Spring Parent</name>
@@ -110,6 +110,7 @@
 		<nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
 		
 		<rhj-io.version>20200503</rhj-io.version>
+		<rhj-jruby.version>${project.version}</rhj-jruby.version>
 		<rhj-utils.version>20200503</rhj-utils.version>
 		
 	</properties>
@@ -121,6 +122,12 @@
 				<groupId>ch.rhj</groupId>
 				<artifactId>rhj-io</artifactId>
 				<version>${rhj-io.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>ch.rhj</groupId>
+				<artifactId>rhj-jruby</artifactId>
+				<version>${rhj-jruby.version}</version>
 			</dependency>
 			
 			<dependency>
