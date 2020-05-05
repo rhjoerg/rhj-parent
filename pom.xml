@@ -79,6 +79,9 @@
 		<!-- https://mvnrepository.com/artifact/org.jruby/jruby-core -->
 		<jruby-core.version>9.2.11.1</jruby-core.version>
 		
+		<!-- https://mvnrepository.com/artifact/org.jruby/jruby-stdlib -->
+		<jruby-stdlib.version>9.2.11.1</jruby-stdlib.version>
+		
 		<junit-jupiter.version>5.5.2</junit-jupiter.version>
 		
 		<!-- https://mvnrepository.com/artifact/org.apache.maven/maven-artifact -->
@@ -196,6 +199,12 @@
 				<groupId>org.jruby</groupId>
 				<artifactId>jruby-core</artifactId>
 				<version>${jruby-core.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.jruby</groupId>
+				<artifactId>jruby-stdlib</artifactId>
+				<version>${jruby-stdlib.version}</version>
 			</dependency>
 	
 			<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
@@ -390,6 +399,7 @@
 					<ignoredDependencies>
 						<ignoredDependency>org.mockito</ignoredDependency>
 						<ignoredDependency>org.junit.jupiter</ignoredDependency>
+						<ignoredDependency>org.jruby:jruby-stdlib</ignoredDependency>
 					</ignoredDependencies>
 				</configuration>
 				<executions>
