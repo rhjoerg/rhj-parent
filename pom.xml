@@ -36,9 +36,8 @@
 	
 	<distributionManagement>
 		<repository>
-			<id>github</id>
-			<name>GitHub rhjoerg Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/rhjoerg/rhj-packages</url>
+			<id>bintray</id>
+			<url>https://api.bintray.com/maven/rhjoerg/rhj-packages/${project.artifactId}/;publish=1</url>
 		</repository>
 	</distributionManagement>
 	
