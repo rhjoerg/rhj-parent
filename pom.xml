@@ -7,7 +7,7 @@
 	
 	<groupId>ch.rhj</groupId>
 	<artifactId>rhj-parent</artifactId>
-	<version>20200505</version>
+	<version>20200506</version>
 	<packaging>pom</packaging>
 	
 	<name>RHJ Spring Parent</name>
@@ -83,6 +83,9 @@
 		<jruby-stdlib.version>9.2.11.1</jruby-stdlib.version>
 		
 		<junit-jupiter.version>5.5.2</junit-jupiter.version>
+		
+		<!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-commons -->
+		<junit-platform-commons.version>1.5.2</junit-platform-commons.version>
 		
 		<!-- https://mvnrepository.com/artifact/org.apache.maven/maven-artifact -->
 		<maven-artifact.version>3.6.3</maven-artifact.version>
@@ -219,6 +222,12 @@
 			    <groupId>org.junit.jupiter</groupId>
 			    <artifactId>junit-jupiter</artifactId>
 			    <version>${junit-jupiter.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.junit.platform</groupId>
+				<artifactId>junit-platform-commons</artifactId>
+				<version>${junit-platform-commons.version}</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter -->
