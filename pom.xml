@@ -7,7 +7,7 @@
 	
 	<groupId>ch.rhj</groupId>
 	<artifactId>rhj-parent</artifactId>
-	<version>20200506.3</version>
+	<version>20200506.4</version>
 	<packaging>pom</packaging>
 	
 	<name>RHJ Parent</name>
@@ -33,14 +33,6 @@
 		<connection>scm:git:git://github.com/rhjoerg/${project.artifactId}.git</connection>
 		<developerConnection>scm:git:git@github.com:rhjoerg/${project.artifactId}.git</developerConnection>
 	</scm>
-	
-	<distributionManagement>
-		<repository>
-			<id>bintray-rhjoerg-maven</id>
-			<name>rhjoerg-maven</name>
-			<url>https://api.bintray.com/maven/rhjoerg/maven/${project.artifactId}/;publish=1</url>
-		</repository>
-	</distributionManagement>
 	
 	<developers>
 		<developer>
@@ -113,9 +105,9 @@
 		<mockito-junit-jupiter.version>3.1.0</mockito-junit-jupiter.version>
 		<nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
 		
-		<rhj-io.version>20200503</rhj-io.version>
+		<rhj-io.version>${project.version}</rhj-io.version>
 		<rhj-jruby.version>${project.version}</rhj-jruby.version>
-		<rhj-utils.version>20200503</rhj-utils.version>
+		<rhj-utils.version>${project.version}</rhj-utils.version>
 		
 	</properties>
 	
