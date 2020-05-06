@@ -7,11 +7,11 @@
 	
 	<groupId>ch.rhj</groupId>
 	<artifactId>rhj-parent</artifactId>
-	<version>20200506.2</version>
+	<version>20200506.3</version>
 	<packaging>pom</packaging>
 	
-	<name>RHJ Spring Parent</name>
-	<description>RHJ Spring Parent</description>
+	<name>RHJ Parent</name>
+	<description>RHJ Parent</description>
 	<url>https://github.com/rhjoerg/${project.artifactId}</url>
 	<inceptionYear>2020</inceptionYear>
 
@@ -36,8 +36,9 @@
 	
 	<distributionManagement>
 		<repository>
-			<id>bintray</id>
-			<url>https://api.bintray.com/maven/rhjoerg/rhj-packages/${project.artifactId}/;publish=1</url>
+			<id>bintray-rhjoerg-maven</id>
+			<name>rhjoerg-maven</name>
+			<url>https://api.bintray.com/maven/rhjoerg/maven/${project.artifactId}/;publish=1</url>
 		</repository>
 	</distributionManagement>
 	
