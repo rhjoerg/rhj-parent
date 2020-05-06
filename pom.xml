@@ -51,6 +51,9 @@
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 		
+		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcpg-jdk15on -->
+		<bcpg-jdk15on.version>1.65</bcpg-jdk15on.version>
+		
 		<commons-compress.version>1.20</commons-compress.version>
 		<commons-io.version>2.6</commons-io.version>
 		<commons-lang3.version>3.10</commons-lang3.version>
@@ -189,6 +192,13 @@
 				<groupId>org.apache.maven</groupId>
 				<artifactId>maven-artifact</artifactId>
 				<version>${maven-artifact.version}</version>
+			</dependency>
+
+			
+			<dependency>
+				<groupId>org.bouncycastle</groupId>
+				<artifactId>bcpg-jdk15on</artifactId>
+				<version>${bcpg-jdk15on.version}</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.jruby/jruby -->
