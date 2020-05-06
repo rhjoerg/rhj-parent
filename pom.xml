@@ -7,7 +7,7 @@
 	
 	<groupId>ch.rhj</groupId>
 	<artifactId>rhj-parent</artifactId>
-	<version>20200504</version>
+	<version>20200505</version>
 	<packaging>pom</packaging>
 	
 	<name>RHJ Spring Parent</name>
