@@ -54,6 +54,9 @@
 		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcpg-jdk15on -->
 		<bcpg-jdk15on.version>1.65</bcpg-jdk15on.version>
 		
+		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on -->
+		<bcprov-jdk15on.version>1.65</bcprov-jdk15on.version>
+		
 		<commons-compress.version>1.20</commons-compress.version>
 		<commons-io.version>2.6</commons-io.version>
 		<commons-lang3.version>3.10</commons-lang3.version>
@@ -186,12 +189,17 @@
 				<artifactId>maven-artifact</artifactId>
 				<version>${maven-artifact.version}</version>
 			</dependency>
-
 			
 			<dependency>
 				<groupId>org.bouncycastle</groupId>
 				<artifactId>bcpg-jdk15on</artifactId>
 				<version>${bcpg-jdk15on.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.bouncycastle</groupId>
+				<artifactId>bcprov-jdk15on</artifactId>
+				<version>${bcprov-jdk15on.version}</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.jruby/jruby -->
