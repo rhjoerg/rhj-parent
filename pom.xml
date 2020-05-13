@@ -125,6 +125,8 @@
 		<rhj-jruby.version>${project.version}</rhj-jruby.version>
 		<rhj-utils.version>${project.version}</rhj-utils.version>
 		
+		<rhj-ncss-maven-plugin.version>20200515.0</rhj-ncss-maven-plugin.version>
+		
 	</properties>
 	
 	<dependencyManagement>
@@ -305,6 +307,12 @@
 			<plugins>
 			
 				<plugin>
+					<groupId>ch.rhj</groupId>
+					<artifactId>rhj-ncss-maven-plugin</artifactId>
+					<version>${rhj-ncss-maven-plugin.version}</version>
+				</plugin>
+			
+				<plugin>
 					<artifactId>maven-antrun-plugin</artifactId>
 					<version>${maven-antrun-plugin.version}</version>
 				</plugin>
@@ -435,6 +443,15 @@
 									</pluginExecutionFilter>
 									<action><ignore /></action>
 								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>ch.rhj</groupId>
+										<artifactId>rhj-ncss-maven-plugin</artifactId>
+										<versionRange>[20200515,)</versionRange>
+										<goals><goal>ncss</goal></goals>
+									</pluginExecutionFilter>
+									<action><ignore /></action>
+								</pluginExecution>
 							</pluginExecutions>
 						</lifecycleMappingMetadata>
 					</configuration>
@@ -523,6 +540,17 @@
 				<configuration>
 					<!-- <skip>true</skip> -->
 				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>ch.rhj</groupId>
+				<artifactId>rhj-ncss-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>ncss</id>
+						<goals><goal>ncss</goal></goals>
+					</execution>
+				</executions>
 			</plugin>
 			
 			<!--
