@@ -7,7 +7,7 @@
 	
 	<groupId>ch.rhj</groupId>
 	<artifactId>rhj-parent</artifactId>
-	<version>20200508.0</version>
+	<version>20200515.0</version>
 	<packaging>pom</packaging>
 	
 	<name>RHJ Parent</name>
@@ -50,6 +50,7 @@
 		
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
+		<java.version>11</java.version>
 		
 		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcpg-jdk15on -->
 		<bcpg-jdk15on.version>1.65</bcpg-jdk15on.version>
@@ -71,7 +72,10 @@
 		<jackson-databind.version>2.11.0</jackson-databind.version>
 		
 		<jackson-dataformat-yaml.version>2.11.0</jackson-dataformat-yaml.version>
-		<java.version>1.8</java.version>
+		
+		<!-- https://mvnrepository.com/artifact/javax.inject/javax.inject -->
+		<javax.inject.version>1</javax.inject.version>
+		
 		<jimfs.version>1.1</jimfs.version>
 		<jruby.version>9.2.11.1</jruby.version>
 		
@@ -89,6 +93,9 @@
 		<!-- https://mvnrepository.com/artifact/org.apache.maven/maven-artifact -->
 		<maven-artifact.version>3.6.3</maven-artifact.version>
 		
+		<!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
+		<logback-classic.version>1.2.3</logback-classic.version>
+		
 		<maven-antrun-plugin.version>3.0.0</maven-antrun-plugin.version>
 		<maven-assembly-plugin.version>3.1.1</maven-assembly-plugin.version>
 		<maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
@@ -102,6 +109,10 @@
 		<maven-invoker-plugin.version>3.2.1</maven-invoker-plugin.version>
 		<maven-jar-plugin.version>3.1.2</maven-jar-plugin.version>
 		<maven-javadoc-plugin.version>3.1.1</maven-javadoc-plugin.version>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-plugin-plugin -->
+		<maven-plugin-plugin.version>3.6.0</maven-plugin-plugin.version>
+		
 		<maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
 		<maven-shade-plugin.version>3.2.2</maven-shade-plugin.version>
 		<maven-site-plugin.version>3.8.2</maven-site-plugin.version>
@@ -131,6 +142,12 @@
 				<version>${rhj-utils.version}</version>
 			</dependency>
 			
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+				<version>${logback-classic.version}</version>
+			</dependency>
+
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-annotations</artifactId>
@@ -164,6 +181,13 @@
 				<version>${commons-io.version}</version>
 			</dependency>
 	
+			<!-- https://mvnrepository.com/artifact/javax.inject/javax.inject -->
+			<dependency>
+				<groupId>javax.inject</groupId>
+				<artifactId>javax.inject</artifactId>
+				<version>${javax.inject.version}</version>
+			</dependency>
+
 			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-compress -->
 			<dependency>
 				<groupId>org.apache.commons</groupId>
@@ -267,6 +291,16 @@
 	</dependencies>
 	
 	<build>
+	
+		<resources>
+			<resource>
+				<directory>${project.basedir}</directory>
+				<includes>
+					<include>LICENSE</include>
+				</includes>
+			</resource>
+		</resources>
+	
 		<pluginManagement>
 			<plugins>
 			
@@ -341,6 +375,12 @@
 					<artifactId>maven-javadoc-plugin</artifactId>
 					<version>${maven-javadoc-plugin.version}</version>
 				</plugin>
+				
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-plugin-plugin</artifactId>
+					<version>${maven-plugin-plugin.version}</version>
+				</plugin>
 
 				<plugin>
 					<artifactId>maven-resources-plugin</artifactId>
@@ -378,6 +418,28 @@
 					<version>${nexus-staging-maven-plugin.version}</version>
 				</plugin>
 
+				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-plugin-plugin</artifactId>
+										<versionRange>[3.6,)</versionRange>
+										<goals><goal>descriptor</goal></goals>
+									</pluginExecutionFilter>
+									<action><ignore /></action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+				
 			</plugins>
 		</pluginManagement>
 		
