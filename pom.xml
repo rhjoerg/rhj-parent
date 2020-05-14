@@ -7,7 +7,7 @@
 	
 	<groupId>ch.rhj</groupId>
 	<artifactId>rhj-parent</artifactId>
-	<version>20200515.0</version>
+	<version>1.0.0</version>
 	<packaging>pom</packaging>
 	
 	<name>RHJ Parent</name>
@@ -122,8 +122,9 @@
 		<mockito-junit-jupiter.version>3.1.0</mockito-junit-jupiter.version>
 		<nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
 		
-		<rhj-jruby.version>${project.version}</rhj-jruby.version>
-		<rhj-utils.version>${project.version}</rhj-utils.version>
+		<rhj-jruby.version>20200515.0</rhj-jruby.version>
+		<rhj-parent.version>${project.version}</rhj-parent.version>
+		<rhj-utils.version>20200515.0</rhj-utils.version>
 		
 		<rhj-ncss-maven-plugin.version>20200515.0</rhj-ncss-maven-plugin.version>
 		
