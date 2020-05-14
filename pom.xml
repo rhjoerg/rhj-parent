@@ -126,7 +126,7 @@
 		<rhj-parent.version>${project.version}</rhj-parent.version>
 		<rhj-utils.version>1.0.0</rhj-utils.version>
 		
-		<rhj-ncss-maven-plugin.version>20200515.0</rhj-ncss-maven-plugin.version>
+		<rhj-ncss-maven-plugin.version>1.0.0</rhj-ncss-maven-plugin.version>
 		
 	</properties>
 	
