@@ -448,7 +448,7 @@
 									<pluginExecutionFilter>
 										<groupId>ch.rhj</groupId>
 										<artifactId>rhj-ncss-maven-plugin</artifactId>
-										<versionRange>[20200515,)</versionRange>
+										<versionRange>[${rhj-ncss-maven-plugin.version},)</versionRange>
 										<goals><goal>ncss</goal></goals>
 									</pluginExecutionFilter>
 									<action><ignore /></action>
