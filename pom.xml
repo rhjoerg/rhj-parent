@@ -56,7 +56,7 @@
 		<bcpg-jdk15on.version>1.65</bcpg-jdk15on.version>
 		
 		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on -->
-		<bcprov-jdk15on.version>1.65</bcprov-jdk15on.version>
+		<bcprov-jdk15on.version>1.67</bcprov-jdk15on.version>
 		
 		<commons-compress.version>1.20</commons-compress.version>
 		<commons-io.version>2.6</commons-io.version>
