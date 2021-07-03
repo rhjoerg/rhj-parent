@@ -53,7 +53,7 @@
 		<java.version>11</java.version>
 		
 		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcpg-jdk15on -->
-		<bcpg-jdk15on.version>1.65</bcpg-jdk15on.version>
+		<bcpg-jdk15on.version>1.67</bcpg-jdk15on.version>
 		
 		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on -->
 		<bcprov-jdk15on.version>1.65</bcprov-jdk15on.version>
